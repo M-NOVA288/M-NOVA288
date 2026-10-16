@@ -70,6 +70,16 @@ A tool that reads service logs and reports reliability against targets.
 
 **Stack:** Python · GitHub Actions
 
+### SLO Telemetry Warehouse
+[Code](https://github.com/M-NOVA288/slo-telemetry-warehouse)
+
+A product-owned data pipeline that turns service logs into reliability metrics in a star-schema warehouse.
+- Validated, idempotent loads on a natural key; malformed lines quarantined with a reason; audit row per run
+- SLIs, p95 latency, error budgets and burn-rate alerts in SQL; Snowflake DDL and MERGE load; CSV exports for Power BI and Tableau
+- Product brief, WSJF backlog, user stories with acceptance criteria mapped to 10 tests, data dictionary, CI and Docker
+
+**Stack:** Python · SQL · SQLite · Snowflake · Docker · GitHub Actions · Power BI/Tableau exports
+
 ### VoxBook
 [Code](https://github.com/M-NOVA288/Vox-book-engine)
 
@@ -88,11 +98,11 @@ A React app that turns a manuscript into audiobook chapters through a resilient 
 |---|---|
 | **Languages** | Java · JavaScript/TypeScript · Python · SQL (T-SQL, PL/SQL) |
 | **Web and backend** | Next.js · Node.js · React · REST APIs · Stripe webhooks · Tailwind CSS · Vite |
-| **Databases** | PostgreSQL · Snowflake · SQL Server · SQLite · Supabase |
+| **Databases** | PostgreSQL · Snowflake · SQL Server · SQLite · Supabase · star-schema modeling |
 | **Data and analytics** | Excel (financial modeling) · matplotlib · NumPy · openpyxl · pandas · Power BI (DAX, Power Query) · Tableau |
 | **Machine learning** | PyTorch · scikit-learn · TensorFlow/Keras |
 | **Testing and reliability** | Docker · GitHub Actions · JUnit 5 · k6 · Maven · OpenTelemetry · SLOs and error budgets |
-| **Domain knowledge** | Energy trading (ETRM/CTRM, OpenLink Endur workflows) · financial modeling and valuation · financial planning · site reliability |
+| **Domain knowledge** | Energy trading (ETRM/CTRM, OpenLink Endur workflows) · financial modeling and valuation · financial planning · site reliability · technical product ownership |
 
 ## How I work
 
