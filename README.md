@@ -1,40 +1,47 @@
 ## Hi, I'm Monisa 👋
 
-I build software that keeps working when the things it depends on don't. My focus is **reliability
-engineering**: designing for failure, measuring what users actually experience, and turning incidents into
-fixes that stick.
+I'm a **Java developer focused on energy and commodity trading systems (ETRM/CTRM)**. I build the code that sits around a trading platform: trade validation rules, valuation and risk, settlements, interfaces, and the production support that keeps them running through end of day.
 
-I come to engineering from data analytics and business operations, so I care about the numbers behind
-a system: what "reliable" means in SLOs, where the error budget went, and which fix buys the most.
+I come to engineering from data analytics and business operations, so I think in terms of the business workflow first — how a trade moves from capture to confirmation, scheduling, settlement and the general ledger — and then build the technical solution around it.
 
-### What I've built
+### Featured: Endur ETRM Toolkit
 
-| Project | Reliability work |
+[**endur-etrm-toolkit**](https://github.com/M-NOVA288/endur-etrm-toolkit) — a Java 17 toolkit modeled on **OpenLink Endur** workflows for gas, power, swaps and futures:
+
+- **Trading:** deal capture and lifecycle (book, validate, amend with versioning, cancel, mature) with a full audit trail
+- **Ops-service rules:** pre-booking checks for mandatory fields, duplicate trades, counterparty status, trader authorization, price tolerance and credit limits
+- **Valuation & risk:** realized and unrealized MtM, P&L explain, positions, historical VaR, credit exposure
+- **Gas scheduling:** supply-to-market pathing, NAESB nomination cycles, pipeline cuts and re-nominations, imbalance cash-out
+- **Back office & interfaces:** settlements and netted invoices, trade feed import, XML confirmations, balanced GL extract, broker reconciliation
+- **Production support:** EOD batch, failure isolation, safe re-runs and a support runbook; 48 automated tests and CI
+
+### Other projects
+
+| Project | What it shows |
 |---|---|
-| [**Deal Liaison**](https://github.com/M-NOVA288/Deal-liaison-w-Vercel-Supabase) · [live](https://deal-engine-rose.vercel.app) | Production service taking real payments. SLOs and error budget, health checks, structured logs with request IDs, OpenTelemetry, idempotent Stripe webhooks, failure-mode tests, Docker, CI, and blameless postmortems from real incidents. |
-| [**VoxBook**](https://github.com/M-NOVA288/Vox-book-engine) | Job pipeline for an unreliable upstream API: retries with jittered backoff, timeouts, circuit breaker, dead-letter queue, plus a fault-injection lab to break it on purpose. |
-| [**SLO & Log Analyzer**](https://github.com/M-NOVA288/Elemapi-EDA-and-Regression/tree/main/02-slo-log-analyzer) | Python tool that reads service logs and reports SLO compliance, error-budget burn, when burn-rate alerts would have paged, and anomalies. |
-| [**ML projects**](https://github.com/M-NOVA288/Elemapi-EDA-and-Regression) | CNN and MNIST classifiers in TensorFlow/Keras with augmentation, regularization and early stopping. |
+| [**Deal Liaison**](https://github.com/M-NOVA288/Deal-liaison-w-Vercel-Supabase) · [live](https://deal-engine-rose.vercel.app) | Production service taking real payments: idempotent payment webhooks, SLOs, structured logging, failure-mode tests, CI, and postmortems from real incidents. |
+| [**VoxBook**](https://github.com/M-NOVA288/Vox-book-engine) | Job pipeline for an unreliable upstream API: retries with backoff, timeouts, circuit breaker, dead-letter queue — the same patterns trading-system interfaces need. |
+| [**SLO & Log Analyzer**](https://github.com/M-NOVA288/Elemapi-EDA-and-Regression/tree/main/02-slo-log-analyzer) | Python tool that reads service logs and reports SLO compliance, error-budget burn and anomalies — root-cause analysis from data. |
+| [**ML projects**](https://github.com/M-NOVA288/Elemapi-EDA-and-Regression) | CNN and MNIST classifiers in TensorFlow/Keras. |
 
 ### How I work
 
-- **Design for failure first.** Every dependency gets a timeout, a retry policy that only retries what can succeed, and a plan for when it's down.
-- **Measure what users feel.** SLIs and SLOs before dashboards; alerts on symptoms, not causes.
-- **Learn from incidents, blamelessly.** Timeline, root cause, action items with owners and status.
-- **Automate the toil.** If I check it by hand twice, it goes into CI.
-- **Be honest about limits.** Every project README lists what isn't done yet.
+- **Business requirements first.** Understand the trading, risk or operations workflow, then translate it into a technical design.
+- **Fail safe.** In a trading system a defect should stop a bad trade, never let it through.
+- **Own production support.** Clear audit trails, root-cause analysis, and fixes that stick.
+- **Test what matters.** Business rules and calculations are covered by automated tests and checked in CI.
+- **Be honest about limits.** Every project README states what isn't covered.
 
 ### Tech stack
 
-**Languages:** TypeScript · JavaScript (Node.js) · Python · SQL<br>
-**Backend & data:** Next.js · REST APIs · PostgreSQL (Supabase, row-level security) · SQLite · Stripe<br>
-**Reliability & ops:** Docker · GitHub Actions CI · OpenTelemetry · structured logging · health checks · k6 load testing · SLOs/error budgets<br>
-**Cloud & hosting:** Vercel (serverless) · Supabase<br>
-**Frontend:** React · Vite · Tailwind CSS<br>
-**Data & ML:** pandas · scikit-learn · TensorFlow/Keras · PyTorch basics · Jupyter
+**Languages:** Java · SQL · Python · TypeScript/JavaScript<br>
+**ETRM domain:** deal lifecycle · ops-service trade rules · MtM valuation · VaR · credit · gas scheduling & nominations · settlements · confirmations · GL<br>
+**Java & tooling:** Java 17 · Maven · JUnit 5 · GitHub Actions CI<br>
+**Data & backend:** PostgreSQL · REST APIs · Docker · structured logging · OpenTelemetry<br>
+**Data & ML:** pandas · scikit-learn · TensorFlow/Keras
 
-**Currently learning:** Kubernetes · Google Cloud Run · Prometheus and Grafana
+**Currently learning:** OpenLink Endur (OpenComponents / JVS plugin development) · power scheduling (ERCOT)
 
 ### Open to
 
-Entry-level **Site Reliability**, **Platform** and **Backend** engineering roles.
+**ETRM / Endur developer**, **Java developer in energy and commodity trading**, and **trading-systems production support** roles — Houston, TX.
