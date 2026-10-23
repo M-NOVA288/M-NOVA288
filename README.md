@@ -2,13 +2,23 @@
 
 I build software and financial models: Java systems for energy trading, full-stack TypeScript services, Python data and machine-learning tools, and Excel/Python models for financial planning. I come from data analytics and business operations, so I start with the business workflow and build the technical solution around it.
 
-**B.S. Computer Science, University of Houston · FMVA® certified (Corporate Finance Institute) · Houston, TX**
+**B.S. Computer Science, University of Houston · CFA® charterholder · FMVA® certified (Corporate Finance Institute) · Houston, TX**
 
 ---
 
 ## Projects
 
 Listed alphabetically. Each README states what the project covers and what it doesn't.
+
+### Campaign Audience Build
+[Code](https://github.com/M-NOVA288/campaign-audience-build)
+
+A database marketing campaign list pull, written in SQL and SAS and run by Unix shell scripts.
+- Audience selection, ordered suppression waterfall, de-duplication, channel assignment, RFM segments and a 10% holdout
+- Three QA layers (pre-flight, audience, vendor file) that stop the job on any failure, tested by breaking the output on purpose
+- Vendor files split by channel with control totals and checksums; campaign brief and stakeholder status update
+
+**Stack:** SQL · SAS · Bash/Unix (awk, cron) · Python
 
 ### Deal Liaison
 [Code](https://github.com/M-NOVA288/Deal-liaison-w-Vercel-Supabase) · [Live](https://deal-engine-rose.vercel.app)
@@ -96,13 +106,13 @@ A React app that turns a manuscript into audiobook chapters through a resilient 
 
 | Area | Tools |
 |---|---|
-| **Languages** | Java · JavaScript/TypeScript · Python · SQL (T-SQL, PL/SQL) |
+| **Languages** | Java · JavaScript/TypeScript · Python · SAS · SQL (T-SQL, PL/SQL) · Bash |
 | **Web and backend** | Next.js · Node.js · React · REST APIs · Stripe webhooks · Tailwind CSS · Vite |
 | **Databases** | PostgreSQL · Snowflake · SQL Server · SQLite · Supabase · star-schema modeling |
 | **Data and analytics** | Excel (financial modeling) · matplotlib · NumPy · openpyxl · pandas · Power BI (DAX, Power Query) · Tableau |
 | **Machine learning** | PyTorch · scikit-learn · TensorFlow/Keras |
 | **Testing and reliability** | Docker · GitHub Actions · JUnit 5 · k6 · Maven · OpenTelemetry · SLOs and error budgets |
-| **Domain knowledge** | Energy trading (ETRM/CTRM, OpenLink Endur workflows) · financial modeling and valuation · financial planning · site reliability · technical product ownership |
+| **Domain knowledge** | Energy trading (ETRM/CTRM, OpenLink Endur workflows) · financial modeling and valuation · financial planning · database marketing and campaign operations · site reliability · technical product ownership |
 
 ## How I work
 
