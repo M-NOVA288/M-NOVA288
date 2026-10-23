@@ -2,7 +2,7 @@
 
 I build software and financial models: Java systems for energy trading, full-stack TypeScript services, Python data and machine-learning tools, and Excel/Python models for financial planning. I come from data analytics and business operations, so I start with the business workflow and build the technical solution around it.
 
-**B.S. Computer Information Systems, University of Houston · FMVA® certified (Corporate Finance Institute) · Houston, TX**
+**B.S. Computer Science, University of Houston · FMVA® certified (Corporate Finance Institute) · Houston, TX**
 
 ---
 
