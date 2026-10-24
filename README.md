@@ -2,7 +2,7 @@
 
 I build software and financial models: Java systems for energy trading, full-stack TypeScript services, Python data and machine-learning tools, and Excel/Python models for financial planning. I come from data analytics and business operations, so I start with the business workflow and build the technical solution around it.
 
-**B.S. Computer Science, University of Houston · CFA® charterholder · FMVA® certified (Corporate Finance Institute) · Houston, TX**
+**B.S. Computer Science, Minor in Business Administration, University of Houston · CFA® charterholder · FMVA® certified (Corporate Finance Institute) · Houston, TX**
 
 ---
 
@@ -17,8 +17,9 @@ A database marketing campaign list pull, written in SQL and SAS and run by Unix 
 - Audience selection, ordered suppression waterfall, de-duplication, channel assignment, RFM segments and a 10% holdout
 - Three QA layers (pre-flight, audience, vendor file) that stop the job on any failure, tested by breaking the output on purpose
 - Vendor files split by channel with control totals and checksums; campaign brief and stakeholder status update
+- Rebuilt in Databricks on Delta tables, with a check that reconciles every waterfall step to the SQL version
 
-**Stack:** SQL · SAS · Bash/Unix (awk, cron) · Python
+**Stack:** SQL · SAS · Bash/Unix (awk, cron) · Databricks (PySpark, Databricks SQL) · Python
 
 ### Deal Liaison
 [Code](https://github.com/M-NOVA288/Deal-liaison-w-Vercel-Supabase) · [Live](https://deal-engine-rose.vercel.app)
@@ -90,6 +91,16 @@ A product-owned data pipeline that turns service logs into reliability metrics i
 
 **Stack:** Python · SQL · SQLite · Snowflake · Docker · GitHub Actions · Power BI/Tableau exports
 
+### Supply Planning Analytics
+[Code](https://github.com/M-NOVA288/supply-planning-analytics)
+
+Supply planning analytics on SAP S/4HANA-shaped data, from MRP data quality to inventory and service KPIs.
+- CDS-style views for material availability, days of supply and projected stock at the end of lead time
+- 8 MRP data-quality rules (missing lead times, zero lot sizes, unplanned demand, stale supply), tested to catch every planted problem
+- Plant KPI scorecard (inventory, excess, OTIF, fill rate), backtested demand forecast, Power BI star schema and DAX measures
+
+**Stack:** SQL · Python · NumPy · Power BI (DAX) · SAP S/4HANA data model
+
 ### VoxBook
 [Code](https://github.com/M-NOVA288/Vox-book-engine)
 
@@ -112,7 +123,7 @@ A React app that turns a manuscript into audiobook chapters through a resilient 
 | **Data and analytics** | Excel (financial modeling) · matplotlib · NumPy · openpyxl · pandas · Power BI (DAX, Power Query) · Tableau |
 | **Machine learning** | PyTorch · scikit-learn · TensorFlow/Keras |
 | **Testing and reliability** | Docker · GitHub Actions · JUnit 5 · k6 · Maven · OpenTelemetry · SLOs and error budgets |
-| **Domain knowledge** | Energy trading (ETRM/CTRM, OpenLink Endur workflows) · financial modeling and valuation · financial planning · database marketing and campaign operations · site reliability · technical product ownership |
+| **Domain knowledge** | Energy trading (ETRM/CTRM, OpenLink Endur workflows) · financial modeling and valuation · financial planning · database marketing and campaign operations · supply planning and MRP · site reliability · technical product ownership |
 
 ## How I work
 
