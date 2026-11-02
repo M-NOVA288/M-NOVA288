@@ -41,6 +41,16 @@ A Java toolkit modeled on OpenLink Endur workflows for gas, power, swaps and fut
 
 **Stack:** Java 17 · Maven · JUnit 5 · SQL · GitHub Actions
 
+### Inventory CLI
+[Code](https://github.com/M-NOVA288/Elemapi-EDA-and-Regression/tree/main/01-inventory-system)
+
+A command-line app for recording stock items in a local database.
+- Add and list items with name, quantity, location and timestamp
+- Parameterized SQL queries to prevent injection
+- Database created automatically on first run
+
+**Stack:** Python · SQLite
+
 ### Inventory Ledger & Webhook Service
 [Code](https://github.com/M-NOVA288/inventory-ledger-webhook-service)
 
@@ -51,16 +61,6 @@ A multi-site inventory ledger over REST that alerts teams the moment stock breac
 - Composite index benchmarked at 312x faster filtered queries on 300,000 ledger rows; 21 tests
 
 **Stack:** Python · PostgreSQL/SQLite · REST APIs · Webhooks · n8n · Docker · pytest
-
-### Inventory CLI
-[Code](https://github.com/M-NOVA288/Elemapi-EDA-and-Regression/tree/main/01-inventory-system)
-
-A command-line app for recording stock items in a local database.
-- Add and list items with name, quantity, location and timestamp
-- Parameterized SQL queries to prevent injection
-- Database created automatically on first run
-
-**Stack:** Python · SQLite
 
 ### Machine Learning Classifiers
 [Code](https://github.com/M-NOVA288/Elemapi-EDA-and-Regression/tree/main/Cat_Dog_Classification)
