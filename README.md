@@ -41,6 +41,17 @@ A Java toolkit modeled on OpenLink Endur workflows for gas, power, swaps and fut
 
 **Stack:** Java 17 · Maven · JUnit 5 · SQL · GitHub Actions
 
+### Inventory Ledger & Webhook Service
+[Code](https://github.com/M-NOVA288/inventory-ledger-webhook-service)
+
+A multi-site inventory ledger over REST that alerts teams the moment stock breaches its safety threshold.
+- Append-only movement ledger with atomic updates; rules block negative stock and unknown SKUs
+- Mock ERP connector maps ERP transaction codes to API calls and reports rejected transactions with their cause
+- HMAC-signed webhooks from an outbox with retries; n8n workflow routes alerts to Slack by severity and logs to Google Sheets
+- Composite index benchmarked at 312x faster filtered queries on 300,000 ledger rows; 21 tests
+
+**Stack:** Python · PostgreSQL/SQLite · REST APIs · Webhooks · n8n · Docker · pytest
+
 ### Inventory CLI
 [Code](https://github.com/M-NOVA288/Elemapi-EDA-and-Regression/tree/main/01-inventory-system)
 
@@ -61,6 +72,16 @@ Image classification networks built and compared in notebooks.
 
 **Stack:** Python · TensorFlow/Keras · PyTorch · scikit-learn · Jupyter/Colab
 
+### Quality Control Data Pipeline
+[Code](https://github.com/M-NOVA288/qc-data-pipeline)
+
+A Java pipeline that validates technician lab logs before they reach the QC database.
+- Rejects malformed rows (missing values, comma decimals, unit mismatches, bad timestamps, unknown stages) with a specific reason
+- Median/MAD outlier detection quarantines data-entry errors but still loads and flags genuine out-of-spec readings
+- Relational schema for stages, spec limits, batches, measurements, anomalies and an audit table; escaped transactional SQL load; 13 unit tests
+
+**Stack:** Java 21 · SQL (PostgreSQL)
+
 ### Retirement Stress Test Model
 [Code](https://github.com/M-NOVA288/retirement-stress-test-model-) · [Live planner](https://m-nova288.github.io/retirement-stress-test-model-/planner/)
 
@@ -70,6 +91,16 @@ A formula-driven financial planning model with an interactive web planner.
 - Practice ROI model with a 10-year client lifetime value DCF; Excel, Python and web results reconcile to the dollar
 
 **Stack:** Excel · Python · openpyxl · NumPy · matplotlib · JavaScript · Chart.js
+
+### Shipping Document & BOL Parser
+[Code](https://github.com/M-NOVA288/bol-shipping-document-parser)
+
+A Python CLI that turns unformatted bills of lading and carrier emails into validated, standardized JSON.
+- Extracts addresses, product codes, quantities, weights, hazmat flags and special instructions; normalizes label variants, kg to lbs, and five date formats
+- Blocks ingestion on missing fields, incomplete addresses, invalid quantities or line-item vs. stated weight mismatches, each logged with a reason
+- Optional LLM fallback fills only fields the rules missed and goes through the same validation; 21 tests
+
+**Stack:** Python · Regex · JSON · LLM API · pytest
 
 ### SLO & Log Analyzer
 [Code](https://github.com/M-NOVA288/Elemapi-EDA-and-Regression/tree/main/02-slo-log-analyzer)
@@ -118,12 +149,12 @@ A React app that turns a manuscript into audiobook chapters through a resilient 
 | Area | Tools |
 |---|---|
 | **Languages** | Java · JavaScript/TypeScript · Python · SAS · SQL (T-SQL, PL/SQL) · Bash |
-| **Web and backend** | Next.js · Node.js · React · REST APIs · Stripe webhooks · Tailwind CSS · Vite |
+| **Web and backend** | Next.js · Node.js · React · REST APIs · Stripe webhooks · HMAC-signed webhooks · n8n · Tailwind CSS · Vite |
 | **Databases** | PostgreSQL · Snowflake · SQL Server · SQLite · Supabase · star-schema modeling |
 | **Data and analytics** | Excel (financial modeling) · matplotlib · NumPy · openpyxl · pandas · Power BI (DAX, Power Query) · Tableau |
 | **Machine learning** | PyTorch · scikit-learn · TensorFlow/Keras |
 | **Testing and reliability** | Docker · GitHub Actions · JUnit 5 · k6 · Maven · OpenTelemetry · SLOs and error budgets |
-| **Domain knowledge** | Energy trading (ETRM/CTRM, OpenLink Endur workflows) · financial modeling and valuation · financial planning · database marketing and campaign operations · supply planning and MRP · site reliability · technical product ownership |
+| **Domain knowledge** | Energy trading (ETRM/CTRM, OpenLink Endur workflows) · financial modeling and valuation · financial planning · database marketing and campaign operations · supply planning and MRP · logistics documents (BOLs) and inventory control · quality control data · site reliability · technical product ownership |
 
 ## How I work
 
